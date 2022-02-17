@@ -16,7 +16,7 @@ const PostWidget = ({ categories, slug }) => {
       getRecentPosts()
         .then((result) => setRelatedPosts(result));
     }
-  }, [slug])
+  }, [slug, categories])
   
   
   return (
