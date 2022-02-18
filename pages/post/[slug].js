@@ -3,13 +3,14 @@ import { useRouter } from 'next/router';
 import { Author } from '../../components';
 import { PostDetail, Categories, PostWidget, Comments, CommentsForm} from '../../components';
 import { getPosts, getPostDetails } from '../../services';
+import { Loader } from '../../components';
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
 
-//   if (router.isFallback) {
-//     return <Loader />;
-//   }
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <>
       <div className="container mx-auto px-10 mb-8">
